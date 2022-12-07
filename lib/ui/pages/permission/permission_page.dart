@@ -46,7 +46,7 @@ class _LocationState extends State<PermissionPage> {
               /* TODO: Busca el controlador de ubicacion [LocationController] con [Get.find],
                inicializalo [initialize] y cuando el futuro se complete [then] usando [WidgetsBinding.instance.addPostFrameCallback]
                navega usando [Get.offAll] a [ContentPage] */
-              return CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
               // TODO: Mientras el futuro se completa muestra un CircularProgressIndicator
             } else if (status == LocationPermission.unableToDetermine ||
                 status == LocationPermission.denied) {
@@ -70,7 +70,7 @@ class _LocationState extends State<PermissionPage> {
             return Text('Error');
             // TODO: Muestra un texto con el error si ocurre.
           } else {
-            return CircularProgressIndicator();
+            return const Center(child: CircularProgressIndicator());
             // TODO: Mientras el futuro se completa muestra un CircularProgressIndicator
           }
         },

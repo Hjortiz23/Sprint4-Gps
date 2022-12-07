@@ -7,8 +7,13 @@ class GpsSensor {
   Future<Position> get currentLocation async => await Geolocator
       .getCurrentPosition(); // Usando GeoLocator obten la posicion actual
 
-  Future<LocationAccuracyStatus> get locationAccuracy async => await Geolocator
-      .getLocationAccuracy(); // Usando GeoLocator verifica la precision de la ubicacion con soporte para web
+  Future<LocationAccuracyStatus> get locationAccuracy async {
+    try {
+      return await Geolocator.getLocationAccuracy();
+    } catch (e) {
+      return LocationAccuracyStatus.unknown;
+    }
+  } // Usando GeoLocator verifica la precision de la ubicacion con soporte para web
 
   Future<LocationPermission> requestPermission() async {
     return await Geolocator.requestPermission();

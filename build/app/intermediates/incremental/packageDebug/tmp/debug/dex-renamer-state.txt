@@ -1,4 +1,4 @@
-#Wed Dec 07 09:08:56 COT 2022
+#Wed Dec 07 13:18:13 COT 2022
 base.0=D\:\\USUARIO\\Desktop\\f_gps_tracker_template-main\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
